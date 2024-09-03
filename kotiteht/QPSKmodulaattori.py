@@ -33,8 +33,8 @@ def QPSK_demodulate(Fs,fc,moduloitu,suodatin):
     # Tehtävä opiskelijalle. Keksi kompleksilukuarvo, jolla
     # kanavan vaihevirhe korjaantuu.
 
-    #korjattuVaihe = complex(?,-?)
-    #kompleksinen = kompleksinen * korjattuVaihe
+    korjattuVaihe = complex(1,-1)
+    kompleksinen = kompleksinen * korjattuVaihe
 
     demoduloitu_I = np.real(kompleksinen)
     demoduloitu_Q = np.imag(kompleksinen)
@@ -95,3 +95,12 @@ if __name__ == '__main__':
     print(SI[55:1005:100])
     # Tehtävä opiskelijalle
     # Tee tähän koodi, joka osaa tehdä bittipäätökset reaalihaaran (SI) tuloksista.
+    bits = np.zeros(10)
+    round=0
+    for i in SI[55:1005:100]:
+        if(i < 0):
+            bits[round] = 0
+        else:
+            bits[round] = 1
+        round = round+1
+    print("bitit: ", bits)
