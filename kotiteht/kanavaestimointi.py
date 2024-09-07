@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 lahetettySymboli = complex(1,1)
 
-kanavanImpulssivaste = complex(10,-0.2)
+kanavanImpulssivaste = complex(7, 0.2)
 
 demoduloituSymboli = lahetettySymboli*kanavanImpulssivaste
 
@@ -26,6 +26,7 @@ print("Vaihekorjattu signaali = ",Vaihekorjattu)
 
 AmplitudiKorjattu = Vaihekorjattu / np.abs(np.power(kanavanImpulssivaste,2))
 print("Vaihe ja amplitudikorjattu signaali = ", AmplitudiKorjattu)
+print("")
 
 '''
 Ja toisena tehtävänä tutkitaan miten MIMO signaali voidaan vastaanottaa.
@@ -61,10 +62,11 @@ h22 = complex(np.random.randn(1),np.random.randn(1))  # alustetaan kanava satunn
 
 
 # Laitetaan kaikki matriisimuotoon
-
+print("")
 L = np.array([[l1],[l2]])
 
 print("lähetetty = ", L)
+print("")
 
 H = np.array([[h11,h12],[h21,h22]])
 print("kanavamatriisi = ", H)
@@ -75,6 +77,7 @@ print("käännetty kanavamatriisi = ", iH)
 R = np.matmul(H,L)
 print("Kanavalta vastaanotetaan = ", R)
 
+print("")
 K = np.matmul(iH,R)
 print("kanavamatriisilla korjattu = ", K)
 
