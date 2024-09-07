@@ -21,11 +21,11 @@ demoduloituSymboli = lahetettySymboli*kanavanImpulssivaste
 
 '''
 
-#Vaihekorjattu = demoduloituSymboli *???
-#print("Vaihekorjattu signaali = ",Vaihekorjattu)
+Vaihekorjattu = demoduloituSymboli * np.conj(kanavanImpulssivaste)
+print("Vaihekorjattu signaali = ",Vaihekorjattu)
 
-#AmplitudiKorjattu = Vaihekorjattu / ???
-#print("Vaihe ja amplitudikorjattu signaali = ", AmplitudiKorjattu)
+AmplitudiKorjattu = Vaihekorjattu / np.abs(np.power(kanavanImpulssivaste,2))
+print("Vaihe ja amplitudikorjattu signaali = ", AmplitudiKorjattu)
 
 '''
 Ja toisena tehtävänä tutkitaan miten MIMO signaali voidaan vastaanottaa.
