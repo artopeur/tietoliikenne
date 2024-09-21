@@ -24,7 +24,7 @@ demoduloituSymboli = lahetettySymboli*kanavanImpulssivaste
 Vaihekorjattu = demoduloituSymboli * np.conj(kanavanImpulssivaste)
 print("Vaihekorjattu signaali = ",Vaihekorjattu)
 
-AmplitudiKorjattu = Vaihekorjattu / np.abs(np.power(kanavanImpulssivaste,2))
+AmplitudiKorjattu = Vaihekorjattu / np.power(np.abs(kanavanImpulssivaste),2)
 print("Vaihe ja amplitudikorjattu signaali = ", AmplitudiKorjattu)
 print("")
 
